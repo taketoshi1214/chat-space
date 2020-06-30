@@ -1,19 +1,17 @@
 .Side-bar
   .Left-header
     .Left-box
-      .User-name masa
+      .User-name
+        = current_user.name
       .Icons
-        = link_to "#", class: "Icons__icon" do
+        = link_to new_group_path(current_user), class: "Icons__icon" do
           = icon('fa', 'edit')
-        = link_to "#", class: "Icons__icon" do
+        = link_to edit_user_path(current_user), class: "Icons__icon" do
           = icon('fa', 'cog')
   .Group-list
     .Group
-      .Group__name techcamp
-      .Group__message まだメッセージはありません
-    .Group
-      .Group__name techcamp
-      .Group__message まだメッセージはありません
-    .Group
-      .Group__name techcamp
-      .Group__message まだメッセージはありません
+      = link_to '#' do
+        .Group__name
+          グループ名
+        .Group__message
+          最新のメッセージ
