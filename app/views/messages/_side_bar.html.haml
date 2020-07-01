@@ -9,9 +9,9 @@
         = link_to edit_user_path(current_user), class: "Icons__icon" do
           = icon('fa', 'cog')
   .Group-list
-    .Group
-      = link_to '#' do
-        .Group__name
-          グループ名
-        .Group__message
-          最新のメッセージ
+    - current_user.groups.each do |group|
+      .Group
+        = link_to '#' do
+          .Group__name
+            = group.name
+          .Group__message
