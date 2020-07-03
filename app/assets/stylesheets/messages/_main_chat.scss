@@ -14,9 +14,13 @@
         font-size: 20px;
         margin-bottom: 15px;
       }
-      .Member-list {
+      .List-box {
+        display: flex;
         color: #999999;
         font-size: 12px;
+        .Member-list{
+          margin-left: 6px;
+        }
       }
     }
     .Group-edit {
@@ -26,6 +30,7 @@
       margin-top: 28px;
       font-size: 16px;
       border: 1px solid #38aef0;
+      text-align: center;
     }
     a{
       color: #38aef0;
@@ -36,8 +41,9 @@
   .Message-list {
     background-color: #fafafa;
     height: calc(100vh - 190px);
-    padding: 35px 0 0 40px;
-    .Message-box {
+    padding: 35px 40px 0px;
+    overflow: scroll;
+    .MessageBox {
       margin-bottom: 46px;
       .Message-info {
         display: flex;
@@ -65,34 +71,38 @@
     background-color: #d2d2d2;
     height: 90px;
     padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    .Input-box {
-      width: 100%;
+
+    .form {
       display: flex;
-      position: relative;
-      .Input-text {
-        padding-left: 10px;
+      justify-content: space-between;
+      .Input-box {
         width: 100%;
-        border: none;
-      }
-      .Upload-icon {
-        line-height: 50px;
-        font-size: 25px;
-        position: absolute;
-        right: 10px;
-        .Upload-photo {
-          display: none;
+        position: relative;
+        .Input-text {
+          padding-left: 10px;
+          height: 50px;
+          width: 100%;
+          border: none;
+        }
+        .Upload-icon {
+          line-height: 50px;
+          font-size: 25px;
+          position: absolute;
+          right: 10px;
+          .Upload-photo {
+            display: none;
+          }
         }
       }
-    }
-    .Form-send{
-      height: 50px;
-      padding: 0 30px;
-      margin-left: 15px;
-      border: none;
-      background-color: #38aef0;
-      color: #ffffff;
+      .Form-send{
+        height: 50px;
+        padding: 0 30px;
+        margin-left: 15px;
+        font-size: 16px;
+        border: none;
+        background-color: #38aef0;
+        color: #ffffff;
+      }
     }
   }
 }
