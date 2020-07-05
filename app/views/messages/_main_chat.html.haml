@@ -15,7 +15,7 @@
   .Message-list
     = render @messages
   .Message-form
-    = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
+    = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
       .Input-box
         = f.text_field :content, class: 'Input-text', placeholder: 'type a message'
         = f.label :image, class: 'Upload-icon' do
