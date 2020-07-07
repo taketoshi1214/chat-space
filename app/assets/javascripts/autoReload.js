@@ -44,7 +44,7 @@ $(function(){
     let last_message_id = $('.MessageBox:last').data("message-id");
     $.ajax({
       url: "api/messages",
-      type: 'GET',
+      type: 'get',
       dataType: 'json',
       data: {id: last_message_id}
     })
@@ -58,9 +58,9 @@ $(function(){
         $('.Message-list').animate({ scrollTop: $('.Message-list')[0].scrollHeight});
       }
     })
-    .fail(function() {
-      alert('error');
-    });
+//    .fail(function() {
+//      alert('error');
+//    });
   };
   setInterval(reloadMessages, 7000);
 });
